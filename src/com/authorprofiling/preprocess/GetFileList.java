@@ -23,6 +23,7 @@ public class GetFileList {
 		for (int i = 0; i < length; i++) {
 			output.append(listOfFiles[i].getName()+"\n");
 		}
+		
 		output.close();
 	}
 

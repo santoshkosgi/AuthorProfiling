@@ -1,4 +1,4 @@
-package com.authorprofiling.extractfeaturesForAge;
+package com.authorprofiling.extractfeatureswordsForGender;
 
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package com.authorprofiling.extractfeaturesForGender;
+package com.authorprofiling.extractfeatureswordsForAge;
 
 
 import java.io.BufferedReader;
@@ -131,7 +131,6 @@ public class MergeBasedOnFrequency{
 			
 			File folder = new File(sourcePath);
 			File[] listOfFiles = folder.listFiles(); 
-			int file_index=1;
 			if(listOfFiles.length==1){
 				break;
 			}

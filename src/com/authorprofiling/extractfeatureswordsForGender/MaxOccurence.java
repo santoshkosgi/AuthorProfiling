@@ -1,4 +1,4 @@
-package com.authorprofiling.extractfeaturesForGender;
+package com.authorprofiling.extractfeatureswordsForGender;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
