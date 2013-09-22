@@ -97,19 +97,22 @@ public class ExtractFeatures {
 		for(Entry<Integer, Integer> entry : featuresTreeForSVM.entrySet()) {
 			SVMString = SVMString+" "+entry.getKey()+":"+entry.getValue();
 		}
-		output.write(extractFeatures.getGender(prevFileName)+SVMString);
+		output.write(extractFeatures.getAge(prevFileName)+SVMString);
 		output.write("\n");
 		output.close();
 	}
 	
-	public String getGender(String fileName){
-   	 
-   	 String[] title = fileName.split("[_.]");
-   	 if(title[title.length-2].compareToIgnoreCase("MALE") ==0){
-   		 return "+1";
-   	 }
-   	 else{
-   		 return "-1";
-   	 }
-    }
+	public String getAge(String fileName){
+    	 
+    	 String[] title = fileName.split("[_.]");
+    	 if(title[title.length-3].compareToIgnoreCase("10s") ==0){
+    		 return "one";
+    	 }
+    	 else if(title[title.length-3].compareToIgnoreCase("20s") ==0){
+    		 return "two";
+    	 }
+    	 else{
+    		 return "three";
+    	 }
+     }
 }
