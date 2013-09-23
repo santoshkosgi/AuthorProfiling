@@ -48,7 +48,7 @@ public class ExtractFeatures {
 		Hashtable<String,Integer> featuresTable = new Hashtable<String, Integer>(100000,0.75f);
 		ExtractFeatures extractFeatures = new ExtractFeatures();
 		while((fileName = br.readLine())!=null){
-			if(fileName.substring(0, fileName.length()-1).compareTo(prevFileName.substring(0, prevFileName.length()-1))==0){
+			if(fileName.substring(0, fileName.indexOf("@")).compareTo(prevFileName.substring(0, prevFileName.indexOf("@")))==0){
 				fileArrayList.add(fileName);
 				prevFileName = fileName;
 			}
@@ -97,6 +97,7 @@ public class ExtractFeatures {
 		for(Entry<Integer, Integer> entry : featuresTreeForSVM.entrySet()) {
 			SVMString = SVMString+" "+entry.getKey()+":"+entry.getValue();
 		}
+		System.out.println(prevFileName);
 		output.write(extractFeatures.getAge(prevFileName)+SVMString);
 		output.write("\n");
 		output.close();

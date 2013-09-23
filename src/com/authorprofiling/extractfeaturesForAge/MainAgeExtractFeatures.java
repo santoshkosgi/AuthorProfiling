@@ -4,10 +4,8 @@ import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
 
-import com.authorprofiling.extractfeaturesForGender.ExtractFeatures;
-import com.authorprofiling.extractfeaturesForGender.SortedListForFilesofEntities;
 
-public class Main {
+public class MainAgeExtractFeatures {
 
 	/**
 	 * @param args
@@ -23,11 +21,14 @@ public class Main {
 //		4. the path to the feature word list 
 //		String sourceFolderPath = "/home/santosh/Downloads/AP/Experiment1/Entities/1/";
 //		String outputFile = "/home/santosh/Downloads/AP/Experiment1/Entities/1.txt";
-		SortedListForFilesofEntities sortedListForFilesofEntities = new SortedListForFilesofEntities();
+//		SortedListForFilesofEntities sortedListForFilesofEntities = new SortedListForFilesofEntities();
+//		sortedListForFilesofEntities.createSortedListForFilesofEntities(args[0],args[1]);
+//		ExtractFeatures extractFeatures = new ExtractFeatures();
+//		extractFeatures.extractFeatures(args[0], args[1], args[2], args[3]);
+		SortedListForFilesofEntities sortedListForFilesofEntities =  new SortedListForFilesofEntities();
 		sortedListForFilesofEntities.createSortedListForFilesofEntities(args[0],args[1]);
-		ExtractFeatures extractFeatures = new ExtractFeatures();
+		ExtractFeatures extractFeatures =  new ExtractFeatures();
 		extractFeatures.extractFeatures(args[0], args[1], args[2], args[3]);
-		
 	}
 
 }
